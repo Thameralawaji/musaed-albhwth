@@ -25,7 +25,7 @@ st.markdown("""
 """)
 
 # تحميل البيانات
-file_path = "C:\\Users\\user\\OneDrive\\سطح المكتب\\مساعد الدراسات\\مجموع الدراسات.xlsx"
+file_path = "مجموع الدراسات.xlsx"
 wb = load_workbook(filename=file_path, data_only=True)
 sheet = wb["ورقة1"]
 
