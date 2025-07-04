@@ -1,37 +1,38 @@
 import streamlit as st
 # CSS تصميم هادئ وأنيق
+# CSS تصميم هادئ وأنيق يعمل فعليًا مع Streamlit
 st.markdown("""
-<style>
-    body {
+    <style>
+    .css-18e3th9 {
         background-color: #f9f9f9;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-    .main {
+    .css-1d391kg {
         background-color: #ffffff;
-        padding: 20px;
         border-radius: 10px;
+        padding: 20px;
     }
-    h1, h2, h3 {
+    h1 {
         color: #2c3e50;
     }
-    .stTextInput>div>div>input {
+    .stTextInput input {
         background-color: #f0f5fa;
         border-radius: 5px;
         border: 1px solid #c2c2c2;
         padding: 10px;
     }
-    .stButton>button {
+    button[kind="primary"] {
         background-color: #3498db;
         color: white;
         border-radius: 5px;
         height: 3em;
         width: 100px;
     }
-    .stButton>button:hover {
+    button[kind="primary"]:hover {
         background-color: #2980b9;
     }
-</style>
+    </style>
 """, unsafe_allow_html=True)
+
 
 import pandas as pd
 import re
