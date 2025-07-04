@@ -1,37 +1,35 @@
 import streamlit as st
-# CSS تصميم هادئ وأنيق
-# CSS تصميم هادئ وأنيق يعمل فعليًا مع Streamlit
+# تصميم CSS عام مضمون العمل
 st.markdown("""
     <style>
-    .css-18e3th9 {
+    html, body, [class*="css"] {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        direction: rtl;
+        text-align: right;
         background-color: #f9f9f9;
-    }
-    .css-1d391kg {
-        background-color: #ffffff;
-        border-radius: 10px;
-        padding: 20px;
     }
     h1 {
         color: #2c3e50;
     }
-    .stTextInput input {
-        background-color: #f0f5fa;
-        border-radius: 5px;
-        border: 1px solid #c2c2c2;
-        padding: 10px;
+    input {
+        background-color: #f0f5fa !important;
+        border-radius: 5px !important;
+        border: 1px solid #c2c2c2 !important;
+        padding: 10px !important;
     }
-    button[kind="primary"] {
-        background-color: #3498db;
-        color: white;
-        border-radius: 5px;
-        height: 3em;
-        width: 100px;
+    button {
+        background-color: #3498db !important;
+        color: white !important;
+        border-radius: 5px !important;
+        height: 3em !important;
+        width: 120px !important;
     }
-    button[kind="primary"]:hover {
-        background-color: #2980b9;
+    button:hover {
+        background-color: #2980b9 !important;
     }
     </style>
 """, unsafe_allow_html=True)
+
 
 
 import pandas as pd
@@ -54,7 +52,11 @@ st.title("📚 مساعد البحوث والدراسات")
 st.markdown("""
 **مرحبًا بك في مساعد البحوث والدراسات**
 
-*ابحث عن أي بحث أو دراسة بكلمة مفتاحيّة*
+** هذه برمجيّة مُختصرة تعرض ملف الإكسل (مجموع الدراسات) بطريقة لعلّها أيسر وأقرب في البحث**
+
+* البرمجيّة تعرض البحوث والدراسات حتى عام 1446هـ *
+
+**ابحث عن أي بحث أو دراسة بكلمة مفتاحيّة**
 
 نسأل الله لنا ولكم التوفيق والسداد
 """)
