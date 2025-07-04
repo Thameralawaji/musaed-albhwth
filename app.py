@@ -38,6 +38,8 @@ st.markdown("""
 
 البرمجيّة تعرض البحوث والدراسات حتى عام 1446هـ
 
+يقتصر دور البرمجيّة على التعريف بالبحوث والدراسات دون تمكينها من الاطلاع على الملفات المرتبطة
+
 **ابحث عن أي بحث أو دراسة بكلمة مفتاحيّة**
 
 نسأل الله لنا ولكم التوفيق والسداد
@@ -78,13 +80,15 @@ if df.columns[0] != "م":
     df = df.drop(df.columns[0], axis=1)
 
 # دالة إزالة التشكيل والهمزات
-def normalize_arabic(text):
+def normalize_arabic(text):def normalize_arabic(text):
     text = str(text)
-    text = re.sub(r'[ًٌٍَُِّْـ]', '', text)
-    text = re.sub(r'[إأآا]', 'ا', text)
-    text = re.sub(r'[ؤئ]', 'ء', text)
-    text = re.sub(r'ة', 'ه', text)
+    text = re.sub(r'[ًٌٍَُِّْـ]', '', text)  # حذف التشكيل
+    text = re.sub(r'[إأآا]', 'ا', text)    # توحيد الألف
+    text = re.sub(r'[ؤئ]', 'ء', text)      # توحيد الهمزة
+    text = re.sub(r'ة', 'ه', text)         # تحويل التاء المربوطة
+    text = re.sub(r'^ال', '', text)        # حذف أل التعريف من أول الكلمة
     return text
+
 
 # واجهة البحث
 st.markdown("---")
