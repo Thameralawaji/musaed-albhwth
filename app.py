@@ -1,31 +1,14 @@
 import streamlit as st
-# تصميم CSS عام مضمون العمل
+# تصميم CSS مبسط يركز على الخط والاتجاه فقط
 st.markdown("""
     <style>
     html, body, [class*="css"] {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         direction: rtl;
         text-align: right;
-        background-color: #f9f9f9;
     }
     h1 {
         color: #2c3e50;
-    }
-    input {
-        background-color: #f0f5fa !important;
-        border-radius: 5px !important;
-        border: 1px solid #c2c2c2 !important;
-        padding: 10px !important;
-    }
-    button {
-        background-color: #3498db !important;
-        color: white !important;
-        border-radius: 5px !important;
-        height: 3em !important;
-        width: 120px !important;
-    }
-    button:hover {
-        background-color: #2980b9 !important;
     }
     </style>
 """, unsafe_allow_html=True)
@@ -53,7 +36,7 @@ st.markdown("""
 
 **هذه برمجيّة مُختصرة تعرض ملف الإكسل (مجموع الدراسات) بطريقة لعلّها أيسر وأقرب في البحث**
 
-*البرمجيّة تعرض البحوث والدراسات حتى عام 1446هـ*
+البرمجيّة تعرض البحوث والدراسات حتى عام 1446هـ
 
 **ابحث عن أي بحث أو دراسة بكلمة مفتاحيّة**
 
