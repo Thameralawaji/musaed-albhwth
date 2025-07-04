@@ -1,4 +1,38 @@
 import streamlit as st
+# CSS تصميم هادئ وأنيق
+st.markdown("""
+<style>
+    body {
+        background-color: #f9f9f9;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .main {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    h1, h2, h3 {
+        color: #2c3e50;
+    }
+    .stTextInput>div>div>input {
+        background-color: #f0f5fa;
+        border-radius: 5px;
+        border: 1px solid #c2c2c2;
+        padding: 10px;
+    }
+    .stButton>button {
+        background-color: #3498db;
+        color: white;
+        border-radius: 5px;
+        height: 3em;
+        width: 100px;
+    }
+    .stButton>button:hover {
+        background-color: #2980b9;
+    }
+</style>
+""", unsafe_allow_html=True)
+
 import pandas as pd
 import re
 from openpyxl import load_workbook
@@ -17,9 +51,9 @@ st.markdown("""
 st.title("📚 مساعد البحوث والدراسات")
 
 st.markdown("""
-**مرحبًا بك في مساعد إدارة البحوث والدراسات**
+**مرحبًا بك في مساعد البحوث والدراسات**
 
-🔹 * ابحث عن أي بحث أو دراسة بكلمة مفتاحيّة *
+*ابحث عن أي بحث أو دراسة بكلمة مفتاحيّة*
 
 نسأل الله لنا ولكم التوفيق والسداد
 """)
@@ -82,4 +116,4 @@ if study_name:
     else:
         st.warning("لم يتم العثور على أي تفاصيل تخصّ ما تفضّلتم به ")
 else:
-    st.info("🔔 الرجاء كتابة كلمة مفتاحية ")
+    st.info("🔔 الرجاء كتابة كلمة مفتاحيّة ")
