@@ -36,9 +36,9 @@ st.markdown("""
 
 **هذه برمجيّة مُختصرة تعرض ملف الإكسل (مجموع الدراسات) بطريقة لعلّها أيسر وأقرب في البحث**
 
-البرمجيّة تعرض البحوث والدراسات حتى عام 1446هـ
-
 يقتصر دور البرمجيّة على التعريف بالبحوث والدراسات دون تمكينها من الاطلاع على الملفات المرتبطة
+
+البرمجيّة تعرض البحوث والدراسات حتى عام 1446هـ
 
 **ابحث عن أي بحث أو دراسة بكلمة مفتاحيّة**
 
@@ -79,8 +79,7 @@ df = df.drop(columns=cols_to_drop)
 if df.columns[0] != "م":
     df = df.drop(df.columns[0], axis=1)
 
-# دالة إزالة التشكيل والهمزات
-def normalize_arabic(text):def normalize_arabic(text):
+def normalize_arabic(text):
     text = str(text)
     text = re.sub(r'[ًٌٍَُِّْـ]', '', text)  # حذف التشكيل
     text = re.sub(r'[إأآا]', 'ا', text)    # توحيد الألف
@@ -88,6 +87,7 @@ def normalize_arabic(text):def normalize_arabic(text):
     text = re.sub(r'ة', 'ه', text)         # تحويل التاء المربوطة
     text = re.sub(r'^ال', '', text)        # حذف أل التعريف من أول الكلمة
     return text
+
 
 
 # واجهة البحث
