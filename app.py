@@ -94,9 +94,19 @@ def normalize_arabic(text):
 
 # واجهة البحث
 st.markdown("---")
-study_name = st.text_input("🔎 **تفضّل بالاستفسار عن أي دراسة:**")
+# تصميم صف يحتوي على مربع الإدخال وزر الإرسال
+col1, col2 = st.columns([4,1])
 
-if study_name:
+with col1:
+    study_name = st.text_input("🔎 تفضّل بالاستفسار عن أي دراسة:")
+
+with col2:
+    search_button = st.button("🔍 بحث")
+
+
+if search_button and study_name:
+    # تابع نفس منطق البحث السابق هنا...
+
     pattern = re.compile(normalize_arabic(study_name), re.IGNORECASE)
     filtered_data = df[df.apply(lambda row: row.astype(str).apply(lambda x: bool(pattern.search(normalize_arabic(str(x))))).any(), axis=1)]
 
